@@ -42,9 +42,9 @@ public class NewApi {
     System.out.println("Start " + buffer.size());
     int i = 0;
     for (ConsumerRecord<String, String> record : buffer) {
-      System.out.println(i + " " + record.value());
+      //      System.out.println(i + " " + record.value());
       i++;
     }
-    System.out.println("End " + buffer.size());
+    //    System.out.println("End " + buffer.size());
   }
 }
