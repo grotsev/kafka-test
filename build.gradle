@@ -6,6 +6,9 @@ version = 1.0
 
 repositories {
     mavenCentral()
+    maven {
+        url "http://packages.confluent.io/maven/"
+    }
 }
 
 sourceSets.all { set ->
@@ -29,8 +32,9 @@ dependencies {
 
     implCompile sourceSets.api.output
     implCompile 'commons-lang:commons-lang:2.6'
-    implCompile 'org.apache.kafka:kafka_2.11:0.9.0.1'
-    implCompile 'org.apache.kafka:kafka-clients:0.9.0.1'
+    implCompile 'org.apache.kafka:kafka_2.11:0.9.0.1-cp1'
+    implCompile 'org.apache.kafka:kafka-clients:0.9.0.1-cp1'
+    implCompile 'io.confluent:kafka-avro-serializer:2.0.1'
 
     testCompile 'junit:junit:4.9'
     testCompile sourceSets.api.output
